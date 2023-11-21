@@ -1,7 +1,13 @@
 const text = document.querySelector(".textContent");
 
 const addBtn = function() {
+    const inputValue = text.value.trim();
+
+    if (inputValue === "") {
+    alert("テキストを入力してください。");
+    } else {
     addText = text.value;
+    text.value = "";
     console.log(addText);
 
     const taskArea = document.getElementById("taskArea");
@@ -16,6 +22,6 @@ const addBtn = function() {
         taskList.remove();
         completeBtn.remove();
     });
-}
+}};
 
 
