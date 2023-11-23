@@ -11,14 +11,21 @@ const addBtn = function() {
     console.log(addText);
 
     const taskArea = document.getElementById("taskArea");
-    const taskList = taskArea.appendChild(document.createElement("p"));
+    const taskWrap = document.createElement("div");
+    taskWrap.classList = "taskWrap";
+    taskArea.appendChild(taskWrap);
+    
+    const taskList = taskWrap.appendChild(document.createElement("p"));
     taskList.innerHTML = addText;
+    taskList.className = "taskList";
 
     const completeBtn = document.createElement("button");
-    taskList.appendChild(completeBtn);
+    taskWrap.appendChild(completeBtn);
     completeBtn.textContent = "完了";
+    completeBtn.className = "completeBtn";
 
     completeBtn.addEventListener("click", function() {
+        taskWrap.remove();
         taskList.remove();
         completeBtn.remove();
     });

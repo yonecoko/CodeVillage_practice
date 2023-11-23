@@ -1,7 +1,22 @@
 body {
+    margin: 0 auto;
     text-align: center;
+    width: 300px;
 }
 
-p {
-    padding-right: 10px;
+.taskWrap {
+    display: flex;
+    width: 80%;
+}
+
+.taskList {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.completebtn {
+    padding: 5px 10px;
+    width: 30px;
 }
